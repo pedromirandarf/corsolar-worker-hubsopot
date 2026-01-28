@@ -9,7 +9,7 @@ const logger = require('./config/logger');
 const swaggerSpec = require('./config/swagger');
 const routes = require('./routes');
 const errorHandler = require('./middleware/errorHandler');
-const rateLimiter = require('./middleware/rateLimiter');
+const { globalLimiter } = require('./middleware/rateLimiter');
 
 const app = express();
 
@@ -40,7 +40,7 @@ app.use(cors({
 }));
 
 // Rate Limiting
-app.use(rateLimiter);
+app.use(globalLimiter);
 
 // ===== Middlewares de Parsing =====
 app.use(express.json({ limit: '10mb' }));
@@ -114,6 +114,11 @@ app.get('/health', (req, res) => {
 });
 
 // ===== Rotas =====
+// Documentação em rota direta
+const docsRoutes = require('./routes/docs.routes');
+app.use('/docs', docsRoutes);
+
+// Rotas API
 app.use('/api', routes);
 
 // Rota raiz
@@ -122,6 +127,7 @@ app.get('/', (req, res) => {
     message: 'Worker-HubSpot API',
     version: '1.0.0',
     documentation: '/api-docs',
+    docs: '/docs',
     health: '/health'
   });
 });

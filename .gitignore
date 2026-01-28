@@ -43,3 +43,10 @@ build/
 # Temporary files
 tmp/
 temp/
+
+# Data files (CSVs exportados)
+data/*.csv
+!data/contatos.csv
+
+# Docker
+.dockerignore

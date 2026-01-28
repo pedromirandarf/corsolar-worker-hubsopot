@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker HubSpot - Documentação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .doc-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .doc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
+        }
+
+        .doc-card h3 {
+            color: #667eea;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .doc-card p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .doc-card a {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .doc-card a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .icon {
+            font-size: 1.8rem;
+        }
+
+        .api-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .api-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .api-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .api-link {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .api-link:hover {
+            border-color: #667eea;
+            transform: translateX(5px);
+        }
+
+        .api-link .method {
+            background: #667eea;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .api-link.post .method {
+            background: #28a745;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .info-box h4 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .docs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Worker HubSpot - Corsolar</h1>
+            <p>Middleware entre HubSpot e Backend Corsolar</p>
+            <p style="margin-top: 10px;"><span class="status-badge">✅ Online</span></p>
+        </header>
+
+        <div class="content">
+            <div class="info-box">
+                <h4>📌 Informações Importantes</h4>
+                <p><strong>Ambiente:</strong> Sandbox</p>
+                <p><strong>Backend API:</strong> https://backend.corsolar.com.br/api</p>
+                <p><strong>Porta:</strong> 3000</p>
+            </div>
+
+            <h2 style="color: #667eea; margin-bottom: 25px; font-size: 2rem;">📚 Documentação</h2>
+            
+            <div class="docs-grid">
+                <div class="doc-card">
+                    <h3><span class="icon">📖</span> Guia de Uso</h3>
+                    <p>Documentação completa sobre como usar a API, incluindo exemplos de requisições e respostas.</p>
+                    <a href="/docs/usage" target="_blank">Abrir Documentação</a>
+                </div>
+
+                <div class="doc-card">
+                    <h3><span class="icon">🐳</span> Docker</h3>
+                    <p>Guia completo sobre Docker: como construir, executar e gerenciar containers da aplicação.</p>
+                    <a href="/docs/docker" target="_blank">Ver Guia Docker</a>
+                </div>
+
+                <div class="doc-card">
+                    <h3><span class="icon">🧪</span> Testes</h3>
+                    <p>Scripts e comandos para testar todos os endpoints da API de forma rápida e eficiente.</p>
+                    <a href="/docs/testing" target="_blank">Ver Guia de Testes</a>
+                </div>
+
+                <div class="doc-card">
+                    <h3><span class="icon">📊</span> API Swagger</h3>
+                    <p>Documentação interativa da API com Swagger UI. Teste os endpoints diretamente no navegador.</p>
+                    <a href="/api-docs" target="_blank">Abrir Swagger UI</a>
+                </div>
+
+                <div class="doc-card">
+                    <h3><span class="icon">🔍</span> Health Check</h3>
+                    <p>Verifique o status da aplicação, uptime, uso de memória e outras métricas importantes.</p>
+                    <a href="/health" target="_blank">Ver Status</a>
+                </div>
+
+                <div class="doc-card">
+                    <h3><span class="icon">📋</span> README</h3>
+                    <p>Visão geral do projeto, instalação, configuração e informações gerais sobre a arquitetura.</p>
+                    <a href="/docs/readme" target="_blank">Ver README</a>
+                </div>
+            </div>
+
+            <div class="api-section">
+                <h2>🔌 Endpoints Principais</h2>
+                <div class="api-links">
+                    <a href="/api/products" class="api-link" target="_blank">
+                        <span class="method">GET</span>
+                        <span>/api/products</span>
+                    </a>
+                    <a href="#" class="api-link post" onclick="alert('Use POST para exportar produtos'); return false;">
+                        <span class="method">POST</span>
+                        <span>/api/products/export</span>
+                    </a>
+                    <a href="#" class="api-link post" onclick="alert('Use POST para enviar contatos'); return false;">
+                        <span class="method">POST</span>
+                        <span>/api/contacts/send-csv</span>
+                    </a>
+                    <a href="#" class="api-link post" onclick="alert('Use POST para enviar contatos JSON'); return false;">
+                        <span class="method">POST</span>
+                        <span>/api/contacts/send</span>
+                    </a>
+                    <a href="/api/hubspot" class="api-link" target="_blank">
+                        <span class="method">GET</span>
+                        <span>/api/hubspot</span>
+                    </a>
+                    <a href="/api/backend" class="api-link" target="_blank">
+                        <span class="method">GET</span>
+                        <span>/api/backend</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="info-box" style="background: #fff3cd; border-left-color: #ffc107;">
+                <h4 style="color: #856404;">⚠️ Configuração Necessária</h4>
+                <p>Certifique-se de configurar a variável <code>BACKEND_API_KEY_SANDBOX</code> no arquivo <code>.env</code> antes de usar a API.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 Corsolar - Worker HubSpot | Desenvolvido com ❤️</p>
+        </footer>
+    </div>
+</body>
+</html>

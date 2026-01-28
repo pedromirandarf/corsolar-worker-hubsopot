@@ -6,7 +6,8 @@ const server = app.listen(config.port, config.host, () => {
   logger.info(`🚀 Worker-HubSpot iniciado com sucesso!`);
   logger.info(`📍 Ambiente: ${config.env}`);
   logger.info(`🌐 URL: http://${config.host}:${config.port}`);
-  logger.info(`📚 Documentação: http://${config.host}:${config.port}/api-docs`);
+  logger.info(`� Documentação Visual: http://${config.host}:${config.port}/docs`);
+  logger.info(`📚 Swagger API: http://${config.host}:${config.port}/api-docs`);
   logger.info(`💚 Health Check: http://${config.host}:${config.port}/health`);
 });
 

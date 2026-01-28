@@ -1,0 +1,21 @@
+nome,email,telefone,endereco,cidade,estado,cep,cpf,data_nascimento
+João Silva,joao.silva@email.com,11987654321,Rua das Flores 123,São Paulo,SP,01234-567,123.456.789-00,1985-03-15
+Maria Santos,maria.santos@email.com,11987654322,Av. Paulista 1000,São Paulo,SP,01310-100,234.567.890-11,1990-07-22
+Pedro Oliveira,pedro.oliveira@email.com,21987654323,Rua do Ouvidor 50,Rio de Janeiro,RJ,20040-030,345.678.901-22,1988-11-30
+Ana Costa,ana.costa@email.com,31987654324,Av. Afonso Pena 1500,Belo Horizonte,MG,30130-001,456.789.012-33,1992-05-10
+Carlos Ferreira,carlos.ferreira@email.com,41987654325,Rua XV de Novembro 200,Curitiba,PR,80020-310,567.890.123-44,1987-09-18
+Juliana Rodrigues,juliana.rodrigues@email.com,51987654326,Av. Borges de Medeiros 300,Porto Alegre,RS,90020-020,678.901.234-55,1995-12-25
+Roberto Lima,roberto.lima@email.com,61987654327,SCS Quadra 2 Bloco C,Brasília,DF,70302-000,789.012.345-66,1983-04-08
+Fernanda Alves,fernanda.alves@email.com,71987654328,Av. Sete de Setembro 500,Salvador,BA,40060-001,890.123.456-77,1991-08-14
+Lucas Pereira,lucas.pereira@email.com,81987654329,Rua da Aurora 100,Recife,PE,50050-000,901.234.567-88,1989-02-28
+Camila Souza,camila.souza@email.com,85987654330,Av. Beira Mar 250,Fortaleza,CE,60165-121,012.345.678-99,1993-06-17
+Rafael Martins,rafael.martins@email.com,11987654331,Rua Augusta 2000,São Paulo,SP,01304-000,111.222.333-00,1986-10-05
+Patricia Gomes,patricia.gomes@email.com,21987654332,Av. Atlântica 1800,Rio de Janeiro,RJ,22021-001,222.333.444-11,1994-01-20
+Marcos Dias,marcos.dias@email.com,31987654333,Rua da Bahia 1200,Belo Horizonte,MG,30160-011,333.444.555-22,1984-07-12
+Tatiana Ribeiro,tatiana.ribeiro@email.com,41987654334,Av. Visconde de Guarapuava 3000,Curitiba,PR,80250-220,444.555.666-33,1996-03-09
+Bruno Carvalho,bruno.carvalho@email.com,51987654335,Rua dos Andradas 1500,Porto Alegre,RS,90020-015,555.666.777-44,1982-11-23
+Gabriela Mendes,gabriela.mendes@email.com,61987654336,SHCS CLN 402 Bloco A,Brasília,DF,70236-500,666.777.888-55,1990-09-30
+Thiago Castro,thiago.castro@email.com,71987654337,Rua Chile 20,Salvador,BA,40020-000,777.888.999-66,1988-05-16
+Amanda Pinto,amanda.pinto@email.com,81987654338,Av. Boa Viagem 5000,Recife,PE,51020-000,888.999.000-77,1992-12-03
+Felipe Barbosa,felipe.barbosa@email.com,85987654339,Rua Barão de Aracati 500,Fortaleza,CE,60115-081,999.000.111-88,1987-08-27
+Renata Campos,renata.campos@email.com,11987654340,Rua Oscar Freire 1500,São Paulo,SP,01426-001,000.111.222-99,1991-04-19
